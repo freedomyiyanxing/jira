@@ -5,7 +5,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts src/test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
@@ -35,7 +35,10 @@
       "react-app",
       "react-app/jest",
       "prettier"
-    ]
+    ],
+    "rules": {
+      "react-hooks/exhaustive-deps": 0
+    }
   },
   "browserslist": {
     "production": [
