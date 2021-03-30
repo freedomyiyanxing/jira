@@ -1,20 +1,17 @@
 import React from 'react';
 import './App.css';
-// import { useDebounce } from './utils/hooks';
-import './test/index';
+import TestUseArray from './pages/test/test-use-array';
+import AppContext from './utils/hooks/index';
+import Login from './pages/login/index';
 
 function App() {
-  const [str, setStr] = React.useState('');
-  // const debouncedValue = useDebounce(str, 1000);
-  //
-  // React.useEffect(() => {
-  //   console.log('------>', str);
-  // }, [debouncedValue]);
-
   return (
-    <div className="App">
-      <input type="text" value={str} onChange={(e) => setStr(e.target.value)} />
-    </div>
+    <AppContext>
+      <div className="App">
+        <TestUseArray />
+        <Login />
+      </div>
+    </AppContext>
   );
 }
 
